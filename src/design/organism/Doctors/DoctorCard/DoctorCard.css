@@ -1,0 +1,42 @@
+.DoctorCard img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.presentation_area > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.presentation_area {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+}
+.presentation_area .content_area {
+  margin-left: 10px;
+}
+.presentation_area .content_area p {
+  color: rgb(17, 17, 17);
+  text-align: left;
+  font-size: 15px;
+}
+.presentation_area .content_area span {
+  text-align: left;
+  display: block;
+  font-size: 12px;
+  color: rgb(92, 91, 91);
+}
+
+.presentation_area .reviews_area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.presentation_area .reviews_area p {
+  color: rgb(124, 124, 124);
+  margin-top: 4px;
+}

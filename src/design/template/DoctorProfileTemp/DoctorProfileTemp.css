@@ -1,0 +1,111 @@
+.DoctorProfileTemp {
+  width: 90%;
+
+  margin: 5rem auto;
+}
+.DoctorProfileTemp .profile_img_area_wrapper {
+  height: 450px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.DoctorProfileTemp .profile_img_area_wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.DoctorProfileTemp .profile_img_area_wrapper .profile_img_wrapper {
+  width: 250px;
+  height: 250px;
+
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.DoctorProfileTemp .profile_img_area_wrapper .profile_img_wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* bottom area */
+.profile_content_area {
+  margin-top: 9rem;
+  display: grid;
+  min-height: 700px;
+  grid-template-columns: 0.6fr 1fr;
+}
+.profile_content_area .left_side {
+  text-align: left;
+  padding-right: 1rem;
+  border-right: 1px solid #ddd;
+}
+.profile_content_area .left_side .desc_area p {
+  margin-top: 1rem;
+}
+.profile_content_area .right_side {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.profile_content_area .right_side .top_area {
+  display: flex;
+  align-items: center;
+}
+.profile_content_area .right_side .top_area > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.profile_content_area .right_side .top_area > p {
+  flex: 1;
+}
+
+/* comments_section */
+.comments_section {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.comments_section > * + * {
+  margin-top: 20px;
+}
+@media screen and (max-width: 800px) {
+  .profile_content_area {
+    grid-template-columns: 1fr;
+  }
+  .profile_content_area .left_side {
+    border: none;
+    padding-right: 0px;
+    order: 2;
+  }
+  .profile_content_area .right_side {
+    padding-left: 0px;
+  }
+  .comments_section {
+    max-height: 500px;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .DoctorProfileTemp .profile_img_area_wrapper {
+    height: 300px;
+  }
+  .DoctorProfileTemp .profile_img_area_wrapper .profile_img_wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}

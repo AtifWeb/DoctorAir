@@ -1,0 +1,28 @@
+.main_buttons {
+  width: 250px;
+  background-color: #fff;
+  height: 60px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  color: #000;
+}
+@media screen and (max-width: 1050px) {
+  .main_buttons {
+    height: 45px;
+    width: 230px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main_buttons {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .main_buttons {
+    width: 170px;
+    font-size: 12px;
+  }
+}

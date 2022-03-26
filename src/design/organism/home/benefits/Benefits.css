@@ -1,0 +1,69 @@
+.Benefits .content {
+  width: 90%;
+  margin: 0rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 2rem;
+  height: 80vh;
+}
+.Benefits .content .presentation {
+  text-align: left;
+}
+.Benefits .content .presentation h1 {
+  font-size: 3rem;
+  width: 90%;
+}
+.Benefits .content .presentation p {
+  font-size: 18px;
+  width: 90%;
+  margin-top: 1rem;
+}
+.Benefits .content img {
+  width: 100%;
+  border-radius: 20px;
+  /* box-shadow: 0px 10px 10px #deeaf5; */
+}
+@media screen and (max-width: 1050px) {
+  .Benefits .content .presentation h1 {
+    font-size: 2rem;
+  }
+  .Benefits .content .presentation p {
+    font-size: 16px;
+  }
+  .Benefits .content {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 900px) {
+  .Benefits {
+    margin-bottom: 6rem;
+  }
+  .Benefits .content {
+    grid-template-columns: 1fr;
+
+    height: unset !important;
+  }
+  .Benefits .content img {
+    order: 1 !important;
+  }
+  .Benefits .content .presentation {
+    order: 2 !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .Benefits .content .presentation h1 {
+    font-size: 25px;
+  }
+  .Benefits .content .presentation p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 330px) {
+  .Benefits .content .presentation h1 {
+    font-size: 20px;
+  }
+  .Benefits .content .presentation p {
+    font-size: 12px;
+  }
+}
