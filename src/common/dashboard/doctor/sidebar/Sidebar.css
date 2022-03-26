@@ -1,0 +1,212 @@
+.side-bar {
+  min-width: 15vw;
+  height: 100vh;
+  background: #fff;
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+@media screen and (max-width: 1200px) {
+  .side-bar {
+    box-shadow: 4px 3px 15px 0px #8e98a5;
+  }
+}
+.side-bar::-webkit-scrollbar {
+  display: none;
+}
+.side-bar .logo {
+  margin-bottom: 2.5rem;
+}
+.sidebar-options > * + * {
+  margin-top: 2rem;
+}
+.sidebar-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  /* font-weight: 500; */
+
+  color: #868a90;
+}
+.sidebar-option > .icon-wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6faff;
+}
+.sidebar-option > .icon-wrapper.active-sideoption {
+  background-color: #0077ff;
+}
+/* billing-sidebar-icon */
+.icon-wrapper.active-sideoption path {
+  fill: #fff;
+}
+.icon-wrapper.active-sideoption line {
+  stroke: #fff;
+}
+.icon-wrapper.active-sideoption #call-analytics-sidebar-option path,
+.icon-wrapper.active-sideoption #messaging-sidebar-icon path,
+.icon-wrapper.active-sideoption #messaging-sidebar-icon circle,
+.icon-wrapper.active-sideoption #billing-sidebar-icon path,
+.icon-wrapper.active-sideoption #Invoicing-sidebar-icon path {
+  fill: none;
+  stroke: #fff;
+}
+#support-option .icon-wrapper.active-sideoption path {
+  fill: none !important;
+  stroke: #fff !important;
+}
+#support-option .icon-wrapper.active-sideoption circle {
+  stroke: #fff !important;
+}
+.input-field,
+.select-field {
+  width: 100%;
+}
+
+.sidebar-option .pure-icon {
+  background-color: #f6faff;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  color: #0077ff;
+}
+
+.sidebar-option small {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logo .brand-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: gray;
+  text-align: center;
+  display: block;
+}
+
+.logo .brand-logo img {
+  width: 70%;
+}
+.side-bar .admin {
+  margin-top: 2.5rem;
+}
+.admin-name {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.admin-pic {
+  background-color: #0077ff;
+  /* background-image: url("../images/laptop2.jfif"); */
+  background-position: center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.logout-option {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ef1a21;
+}
+
+.logout-option .icon {
+  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 7px;
+}
+
+.icon .fas {
+  font-size: 15px;
+}
+
+/* MOBILE RESPONSIVE BAR */
+.menu-bar {
+  background-color: #fff;
+  padding: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+.menu-bar .menu-icon {
+  cursor: pointer;
+}
+.menu-bar img {
+  width: 150px;
+}
+@media screen and (max-width: 1200px) {
+  .menu-bar {
+    display: flex;
+    width: 100%;
+  }
+  .logo .brand-logo {
+    margin-top: 2rem;
+  }
+  .side-bar {
+    position: fixed;
+    top: 0;
+    width: 60%;
+    height: 100vh;
+    z-index: 1000;
+    left: -100%;
+    transition: 0.4s ease all;
+  }
+
+  .side-bar.show-menu {
+    left: 0%;
+  }
+}
+
+/* @media screen and (min-width: 700px) and (min-height: 900px) {
+    .logo .brand-logo {
+      font-size: 1.7rem;
+    }
+  
+    .admin-pic {
+      height: 70px;
+      width: 70px;
+    }
+    .icon .fas {
+      font-size: 18px;
+    }
+  
+    .sidebar-option small {
+      font-size: 24px;
+    }
+    .sidebar-options > * + * {
+      margin-top: 3rem;
+    }
+    .menu-bar .menu-icon,
+    .fas,
+    .far,
+    .icon .fas {
+      font-size: 1.6rem;
+    }
+    .logout-option {
+      margin-top: 25px;
+    }
+  
+    .logout-option small {
+      font-size: 1.5rem;
+    }
+  
+    .logout-option .icon {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  } */

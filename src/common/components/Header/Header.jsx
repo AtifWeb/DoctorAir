@@ -3,7 +3,7 @@ import "./Header.css";
 import logo from "../../../assets/img/logo.png";
 import { Link } from "react-router-dom";
 import burger_icon from "../../../assets/img/burger_icon.svg";
-const Header = () => {
+const Header = ({ setsidebarshow, sidebarshow }) => {
   return (
     <div className="header">
       <div className="content_header">
@@ -12,14 +12,12 @@ const Header = () => {
         </Link>
         <nav className="header_nav_list">
           <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
             <Link to="/Doctors">Doctors</Link>
           </li>
-          <li>
-            <Link to="/">Link 2</Link>
-          </li>
-          <li>
-            <Link to="/">Link </Link>
-          </li>
+
           <li>
             <Link to="/register" className="register">
               Sign Up
@@ -32,7 +30,10 @@ const Header = () => {
           </li>
         </nav>
 
-        <button className="burger_icon">
+        <button
+          className="burger_icon"
+          onClick={(e) => setsidebarshow(!sidebarshow)}
+        >
           <img src={burger_icon} alt="" />
         </button>
       </div>

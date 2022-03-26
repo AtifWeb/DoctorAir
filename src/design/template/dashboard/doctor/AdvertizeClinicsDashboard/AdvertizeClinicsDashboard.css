@@ -1,0 +1,412 @@
+p {
+  font-size: 14px;
+}
+
+.patient-page {
+  display: flex;
+  height: 100vh;
+}
+
+.patient-list-welcome {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.patient-list {
+  height: 100%;
+  overflow-y: auto;
+  flex: 1;
+  padding: 2rem 1.4rem;
+  padding-bottom: 0rem;
+}
+.welcome-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.welcome-left .welcome {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.welcome-left .patient-list-heading {
+  font-size: 50px;
+  color: #0077ff;
+  font-weight: 700;
+}
+
+.welcome-message-desc {
+  color: #868a90;
+}
+
+.welcome-right {
+  background-color: #fff;
+  grid-column: span 3;
+  padding: 2rem 2rem;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  justify-content: center;
+  height: 257px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px #deeaf5;
+}
+
+.lady-image {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  top: 0%;
+
+  right: 0%;
+}
+
+.welcome-right > * + * {
+  margin-top: 10px;
+}
+
+.welcome-right h1 {
+  font-size: 2.4rem;
+  text-align: left;
+}
+
+.welcome-right p {
+  color: #868a90;
+  width: 350px;
+  text-align: left;
+}
+
+.patient-presentation {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+}
+.fa-search,
+.fa-folder {
+  color: #0077ff !important;
+  background-color: #fff;
+  padding: 0.7rem;
+  font-size: 14px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.search-input-wrapper {
+  background-color: #fff;
+  padding: 0.7rem 1rem;
+  flex: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+#presentation-heading {
+  flex: 1;
+  font-size: 2.1rem;
+}
+
+/* media */
+@media screen and (max-width: 1600px) {
+  .welcome-left .patient-list-heading {
+    font-size: 33px;
+  }
+  #presentation-heading {
+    font-size: 25px;
+  }
+}
+
+/* @media end */
+
+.search-input-wrapper input {
+  width: 100%;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+}
+.search-input-wrapper .fa-times {
+  color: #0077ff;
+  cursor: pointer;
+}
+
+.patient-presentation .icons {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}
+.patient-presentation .icons > *:first-child {
+  margin-right: 5px;
+}
+.view-btn {
+  height: 60px;
+  width: 210px;
+  padding: 0rem 3rem;
+  background-color: #0077ff;
+  border: none;
+  color: white;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: 0px 10px 10px #deeaf5;
+  margin-top: 1rem;
+  border-radius: 99px;
+  cursor: pointer;
+}
+.patient-presentation .icon-wrapper {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.patient-presentation .icon-wrapper.d-none {
+  display: none;
+}
+/* CARDS */
+.patients-cards {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: -1;
+  margin-top: 3rem;
+}
+.patients-cards > * {
+  display: block;
+}
+.patients-cards > * {
+  margin-bottom: 30px;
+  padding: 0.5rem;
+}
+.patients-cards .card a {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  width: 200px;
+  height: 250px;
+  justify-content: center;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s ease-in transform;
+  text-align: center;
+  color: #1d232b;
+  box-shadow: 0px 10px 10px #deeaf5;
+}
+.patients-cards .card a:hover {
+  /* transform: scale(1.03); */
+}
+
+.card-details h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #1d232b;
+}
+.card-details p {
+  color: #93979c;
+  font-size: 15px;
+}
+.card-image {
+  border: 10px solid #e3f0ff;
+  border-radius: 50%;
+  width: 109px;
+  height: 109px;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-details a {
+  font-size: 15px;
+  color: #868a90;
+}
+
+.d-none {
+  display: none;
+}
+@media screen and (max-width: 1800px) {
+  .welcome-left {
+    grid-column: span 2;
+  }
+  .patient-list-welcome {
+    grid-template-columns: 1fr 0.2fr 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .welcome-left .welcome {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .lady-image {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .patients-cards {
+    justify-content: center;
+  }
+  .patient-page {
+    flex-direction: column;
+    height: 100%;
+  }
+  .patient-list-welcome > :first-child {
+    margin-right: 0px;
+  }
+  .patient-list-welcome {
+    grid-template-columns: 1fr;
+  }
+  .calender.box {
+    right: 50% !important;
+    transform: translateX(50%) !important;
+  }
+  .patient-list {
+    overflow: visible;
+    padding: 4rem 1.5rem;
+  }
+  .welcome-left {
+    text-align: center;
+    width: 100%;
+    grid-column: span 1;
+    margin-top: 0rem;
+  }
+
+  .welcome-right {
+    padding: 2rem 1rem;
+    align-items: center;
+    text-align: center;
+    grid-column: span 1;
+  }
+
+  .welcome-right p {
+    width: 100%;
+  }
+
+  .lady-image {
+    display: none;
+  }
+
+  .patient-presentation {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .patient-presentation .icons {
+    margin-top: 30px;
+  }
+  .search-input-wrapper {
+    width: 100%;
+    flex: 0;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .patients-cards .card {
+    width: 50%;
+  }
+  .patients-cards .card a {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .patients-cards .card {
+    width: 100%;
+  }
+}
+
+/* Calender Styling */
+.patient-presentation {
+  position: relative;
+}
+.calender.box {
+  position: absolute;
+  padding: 2rem 1.5rem;
+  background-color: #fff;
+  padding: 2rem;
+  right: 0;
+  display: none;
+  top: 110%;
+  z-index: 99;
+  border-radius: 16px;
+  box-shadow: 0px 10px 10px #deeaf5;
+}
+.calender.box.active {
+  display: block;
+}
+.calender-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.calender-top .icon-wrapper {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background-color: #e6f1ff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.calender-days-name {
+  margin-top: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.calender-days-name > span {
+  color: #0077ff;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calender-days-name,
+.calender-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calender-days-name span,
+.calender-days span {
+  font-size: 13px;
+}
+.calender-days {
+  gap: 5px;
+  margin-top: 5px;
+}
+.calender-days > div {
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.calender-days > div.active-day {
+  background-color: #0077ff;
+  color: #fff;
+}
+.calender-days span {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  pointer-events: none;
+}
